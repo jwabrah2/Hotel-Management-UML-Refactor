@@ -1,0 +1,34 @@
+@startuml
+title Hotel Management System - Class Diagram
+
+package "I3.Classes" {
+  class Booking
+  class ExtraOrders
+  class Food
+  class Item
+  class Order
+  class Payment
+  class Room
+  class RoomFare
+  class UserInfo
+}
+
+package "I3.UI" {
+  class ControlPanel
+  class CustomerPanel
+  class FoodPanel
+  class ItemPanel
+  class OrderPanel
+  class PaymentPanel
+  class RoomPanel
+}
+
+' --- Relationships (initial assumption) ---
+Booking --> UserInfo
+Booking --> Room
+Booking --> Payment
+Order --> Item
+Order --> Food
+ExtraOrders --> Order
+
+@enduml
